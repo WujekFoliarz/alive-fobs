@@ -2,8 +2,17 @@
 #include <scan.hpp>
 #include "database.hpp"
 
-int main()
+int main(int argc, char* argv[])
 {
+    if (argc < 3)
+    {
+        std::cerr << "Usage: " << "<ip> <port>" << std::endl;
+        return 1;
+    }
+
+    std::string ip = argv[1];
+    int port = std::stoi(argv[2]);
+
     dotenv env(".env");  // Load variables from .env file
     std::string steam_api_key = env.get("STEAM_API_KEY", "None");
 
@@ -23,5 +32,5 @@ int main()
     });
 
     std::cout << "Started server" << std::endl;
-    svr.listen("127.0.0.1", 8080);
+    svr.listen(ip, port);
 }
