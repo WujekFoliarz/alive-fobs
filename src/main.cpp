@@ -7,6 +7,11 @@ int main()
     dotenv env(".env");  // Load variables from .env file
     std::string steam_api_key = env.get("STEAM_API_KEY", "None");
 
+    if (steam_api_key == "None" || steam_api_key == "YOUR_STEAM_API_HERE")
+    {
+        std::cout << "Steam API key was not setup" << std::endl;
+    }
+
     database::initialize(database::database_type::sqlite3);
     scan::initialize(steam_api_key);
     httplib::Server svr;

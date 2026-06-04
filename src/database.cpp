@@ -112,6 +112,7 @@ namespace database
             return;
         }
 
+        std::filesystem::create_directory("database");
         std::lock_guard<std::mutex> lock(db_lock);
 
         switch (type)
