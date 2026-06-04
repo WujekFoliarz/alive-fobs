@@ -1,0 +1,12 @@
+[submodule "deps/cpp-httplib"]
+	path = deps/cpp-httplib
+	url = https://github.com/yhirose/cpp-httplib
+[submodule "deps/sqlpp11"]
+	path = deps/sqlpp11
+	url = https://github.com/rbock/sqlpp11
+[submodule "deps/json"]
+	path = deps/json
+	url = https://github.com/nlohmann/json
+[submodule "deps/thread-pool"]
+	path = deps/thread-pool
+	url = https://github.com/bshoshany/thread-pool
