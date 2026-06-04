@@ -67,3 +67,5 @@ vcpkg_installed/
 Testing/
 .cache/
 
+# env
+.env
