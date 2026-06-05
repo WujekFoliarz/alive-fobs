@@ -69,3 +69,6 @@ Testing/
 
 # env
 .env
+
+# visual studio
+.vs/
