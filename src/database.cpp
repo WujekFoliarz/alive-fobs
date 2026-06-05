@@ -65,7 +65,7 @@ namespace database
                 for (const auto &mother_base : response_json["mother_base_param"])
                 {
                     std::string str_num = std::to_string(mb_num);
-                    auto& player_mb = player_json["mother_base_param"][str_num];
+                    auto &player_mb = player_json["mother_base_param"][str_num];
                     player_mb["mother_base_id"] = mother_base["mother_base_param"]["mother_base_id"];
                     player_mb["construct_param"] = mother_base["mother_base_param"]["construct_param"];
                     player_mb["area_id"] = mother_base["mother_base_param"]["area_id"];
@@ -74,8 +74,8 @@ namespace database
                     mb_num++;
                 }
 
-                auto& player_ranking = player_json["ranking"];
-                auto& response_ranking = response_json["ranking"];
+                auto &player_ranking = player_json["ranking"];
+                auto &response_ranking = response_json["ranking"];
                 player_ranking["fob_grade"] = response_ranking["fob_grade"];
                 player_ranking["fob_point"] = response_ranking["fob_point"];
                 player_ranking["fob_rank"] = response_ranking["fob_rank"];
