@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run program",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/out/build/linux-debug/alive-fobs",
+            "args": ["127.0.0.1", "8080"],
+            "cwd": "${workspaceFolder}/out/build/linux-debug",
+            "stopAtEntry": false,
+            "externalConsole": false,
+            "MIMode": "gdb"
+        }
+    ]
+}

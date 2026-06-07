@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS players (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    player_id INTEGER UNSIGNED UNIQUE,
+    xuid BIGINT UNSIGNED,
+    last_time_online DATETIME
+)

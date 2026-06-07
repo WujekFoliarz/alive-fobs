@@ -32,12 +32,12 @@ if(NOT SQLite3_FOUND)
 endif()
 
 add_subdirectory(deps/cpp-httplib)
-add_subdirectory(deps/sqlpp11)
+add_subdirectory(deps/sqlpp23)
 add_subdirectory(deps/json)
 add_subdirectory(deps/cmake)
 
 add_executable(${PROJECT_NAME} ${MY_SOURCES})
-target_link_libraries(${PROJECT_NAME} PUBLIC httplib::httplib SQLite3::SQLite3 sqlpp11 BS_thread_pool nlohmann_json::nlohmann_json)
+target_link_libraries(${PROJECT_NAME} PUBLIC httplib::httplib SQLite3::SQLite3 sqlpp23 BS_thread_pool nlohmann_json::nlohmann_json)
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE src/pch.hpp)
 set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)

@@ -176,8 +176,8 @@ namespace scan
             request_pool.detach_task([current_player_id]()
                                      { request_worker(current_player_id); });
 
-            // Remove inactive players every 10 minutes
-            if ((std::chrono::steady_clock::now() - last_time_removed) > std::chrono::minutes(10))
+            // Remove inactive players every 1 hour
+            if ((std::chrono::steady_clock::now() - last_time_removed) > std::chrono::hours(1))
             {
                 database::remove_inactive_players();
                 last_time_removed = std::chrono::steady_clock::now();
